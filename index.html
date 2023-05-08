@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="LMS.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">                    
+</head>
+<body>
+  
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" style="color: white;font-family: Georgia;" href="#"> <i class='fas fa-book-open' style='font-size:20px;color:white'></i> DigiLibrary</a>
+    </div>
+    <div class="navbar1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<marquee><h1 style="margin-top: 0%; font-family: 'Times New Roman', Times, serif;">Welcome to DigiLibrary</h1></marquee>
+  <img class="mySlides w3-animate-right" src="lib.jpg" style="width:100%; height: 100;">
+  <img class="mySlides w3-animate-right" src="lib1.jpg" style="width:100%; height: 100;">
+  <img class="mySlides w3-animate-right" src="lib2.jpg" style="width:100%; height: 100;">
+  <img class="mySlides w3-animate-right" src="lib3.jpg" style="width:100%; height: 100;">
+  <img class="mySlides w3-animate-right" src="lib4.jpg" style="width:100%; height: 100;">
+
+<script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+  }
+  </script>
+  
+<footer class="footer1">
+  <p> &copy DigiLibrary</p>
+</footer>
+
+</body>
+</html>
